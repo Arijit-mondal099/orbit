@@ -10,7 +10,7 @@
   "scripts": {
     "dev:api": "bun run --cwd apps/api dev",
     "dev:web": "bun run --cwd apps/web dev",
-    "build:api": "bun run --cwd apps/apt build",
+    "build:api": "bun run --cwd apps/api build",
     "build:web": "bun run --cwd apps/web build",
     "start:api": "bun run --cwd apps/api start",
     "start:web": "bun run --cwd apps/web start",
