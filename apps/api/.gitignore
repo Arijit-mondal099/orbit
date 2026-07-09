@@ -64,3 +64,5 @@ temp/
 ._*
 .Spotlight-V100
 .Trashes
+
+/src/generated/prisma

@@ -15,6 +15,7 @@ const envSchema = z.object({
         .map((o) => o.trim())
         .filter((o) => o.length > 0),
     ),
+  DATABASE_URL: z.string().min(1),
 });
 
 const parsedEnv = envSchema.safeParse(process.env);
