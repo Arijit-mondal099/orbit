@@ -9,6 +9,8 @@ import { globalRateLimit } from "@/config/rate-limit";
 import { errorMiddleware } from "@/middlewares/error.middleware";
 import { notFoundMiddleware } from "@/middlewares/not-found.middleware";
 import routes from "@/routes";
+import { toNodeHandler } from "better-auth/node";
+import { auth } from "./config/auth";
 
 const app = express();
 
@@ -22,6 +24,9 @@ if (env.NODE_ENV !== "production") {
 }
 
 app.use(globalRateLimit());
+
+// auth
+app.all("/api/auth/*splat", toNodeHandler(auth));
 
 app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
