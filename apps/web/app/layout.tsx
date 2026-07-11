@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Toaster } from "@/components/ui/sonner";
-import { codeFont, normalFont, pixelFont, playfairDisplay } from "@/lib/fonts";
+import { normalFont, pixelFont, playfairDisplay } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${codeFont.variable} ${normalFont.variable} ${pixelFont.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${normalFont.variable} ${pixelFont.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <main>
